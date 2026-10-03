@@ -20,7 +20,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Partner links. Change a URL here and re-run to update every page.
 IKHOKHA_URL = "https://connect.ikhokha.com/ik-referral?code=uYzKEYNl"
-NAKED_URL = "https://www.naked.insure"
+NAKED_URL = "https://app.naked.insure/e/j6UDD5yZV6b"
+WEBAFRICA_URL = "https://www.webafrica.co.za/affiliate?aff=WA-W3701104"
 
 DISCLOSURE = ("Some links on this page are partner links. Lumeo Advisory may receive a reward "
               "if you sign up through them. Always compare options before you decide.")
@@ -367,6 +368,20 @@ def build_recommended():
           <p>Naked is personal insurance. Stock, business equipment and liability cover for the business itself usually need separate business insurance, and income protection, life and disability cover come from a financial adviser. We cover this in <a href="blog/protect-yourself-not-only-the-business.html">Protect yourself, not only the business</a>.</p>
           <h3>How it links to your business</h3>
           <p>A claim, a stolen laptop or a written-off car can interrupt your income. Keeping personal and business money separate, and your books up to date, makes it easier to see what a disruption costs and whether you can absorb it. <a href="index.html#contact">Talk to Lumeo</a> about setting that up.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="partner" id="webafrica">
+      <div class="wrap partner-grid">
+        <div>
+          <h2>Webafrica</h2>
+          <p class="kicker">Internet and hosting services for your business.</p>
+          <a class="btn" href="{WEBAFRICA_URL}" target="_blank" rel="sponsored noopener">Explore Webafrica</a>
+        </div>
+        <div class="partner-body">
+          <p>A reliable internet connection can help you stay in touch with customers, manage online sales and get your day-to-day work done. Webafrica offers internet and hosting services for South African homes and businesses.</p>
+          <p>Check service availability at your address and compare the package, speed, pricing and terms before signing up. This link may be used to sign up for Webafrica services.</p>
         </div>
       </div>
     </section>
