@@ -559,7 +559,7 @@ a { color: inherit; }
           <p>Tell us about your business and we will reply within one working day with a time that suits you.</p>
           <p class="contact-direct">Prefer email? Write to <a id="email-link" href="mailto:admin@lumeo-advisory.co.za">admin@lumeo-advisory.co.za</a></p>
         </div>
-        <form class="form" id="contact-form" novalidate>
+        <form class="form" id="contact-form" action="https://formspree.io/f/xvkgelpa" method="POST" novalidate>
           <label for="name">Your name</label>
           <input id="name" name="name" type="text" autocomplete="name" required>
 
@@ -642,35 +642,61 @@ a { color: inherit; }
     });
   }
 
-  // Contact form: opens the visitor's email app with the details filled in
+  // Contact form: submits directly to Formspree
   var form = document.getElementById("contact-form");
   var note = document.getElementById("form-note");
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var name = form.name.value.trim();
-      var email = form.email.value.trim();
-      var business = form.business.value.trim();
-      var message = form.message.value.trim();
+      var fields = [
+        form.querySelector('[name="name"]'),
+        form.querySelector('[name="email"]'),
+        form.querySelector('[name="business"]'),
+        form.querySelector('[name="message"]')
+      ];
       var valid = true;
 
-      [form.name, form.email, form.message].forEach(function (field) {
-        var ok = field.value.trim() !== "" && (field.type !== "email" || /^\S+@\S+\.\S+$/.test(field.value.trim()));
+      fields.forEach(function (field) {
+        if (field.name === "business") return;
+        var value = field.value.trim();
+        var ok = value !== "" && (field.type !== "email" || /^\S+@\S+\.\S+$/.test(value));
         field.setAttribute("aria-invalid", ok ? "false" : "true");
         if (!ok) valid = false;
       });
 
       if (!valid) {
         note.className = "form-note error";
-        note.textContent = "Please fill in your name, a valid email and a short message.";
+        note.textContent = "Please fill in your name, a valid email and a message.";
         return;
       }
 
-      var subject = "Call request from " + name + (business ? " (" + business + ")" : "");
-      var body = "Name: " + name + "\nEmail: " + email + "\nBusiness: " + (business || "-") + "\n\n" + message;
+      var submit = form.querySelector('[type="submit"]');
+      var data = new FormData(form);
+      data.set("_subject", "New website enquiry from " + data.get("name").trim());
+      submit.disabled = true;
       note.className = "form-note";
-      note.textContent = "Opening your email app. Press send there to finish.";
-      window.location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      note.textContent = "Sending your request…";
+
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      }).then(function (response) {
+        if (!response.ok) {
+          return response.json().then(function (result) {
+            throw new Error(result.error || "Your request could not be sent. Please try again.");
+          });
+        }
+        form.reset();
+        fields.forEach(function (field) { field.removeAttribute("aria-invalid"); });
+        note.className = "form-note";
+        note.textContent = "Thanks, your request has been sent. We will get back to you within one working day.";
+      }).catch(function (error) {
+        note.className = "form-note error";
+        note.textContent = error.message || "We could not send your request. Please try again or email us directly.";
+      }).then(function () {
+        submit.disabled = false;
+      });
     });
   }
 })();
