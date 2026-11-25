@@ -18,6 +18,7 @@ SARS = A("SARS", "https://www.sars.gov.za")
 CIPC = A("CIPC", "https://www.cipc.co.za")
 THUNDA = A("Thundafund", "https://www.thundafund.com")
 NCR = A("National Credit Regulator", "https://www.ncr.org.za")
+EXPLEE_URL = "https://explee.com/?utm_source=Pumeza+Mqeni&utm_medium=affiliate&utm_campaign=Explee&ref=pumeza63"
 
 ARTICLES = [
     {
@@ -349,5 +350,42 @@ ARTICLES = [
             ("p", "Accountants and bookkeepers get busy in January and February. If you want support at year-end, ask now."),
         ],
         "help": ("Close the year well", "Book a call and we will tell you where your books stand and what to fix before year-end."),
+    },
+    {
+        "slug": "how-south-african-smes-can-automate-b2b-client-acquisition",
+        "date": "2026-11-25",
+        "title": "How South African SMEs can automate B2B client acquisition without hiring a sales team",
+        "summary": "How an autonomous AI outbound agent handles prospecting, personalised outreach, follow-ups and booking on pay-as-you-go terms.",
+        "partner": True,
+        "body": [
+            ("p", "For most small business owners, consultants, and service providers, finding new clients is one of the hardest parts of scaling. When you are busy managing daily operations, fulfilling orders, and keeping cash flow healthy, prospecting often drops to the bottom of the to-do list."),
+            ("p", "Traditionally, fixing this meant either spending hours manually searching LinkedIn and Google for leads, or paying steep monthly retainers for multiple outbound software tools and email warm-up services. Explee offers a simpler, leaner alternative: an autonomous AI outbound agent designed to handle B2B prospecting and cold outreach on pay-as-you-go terms."),
+            ("h2", "What is Explee?"),
+            ("p", "Explee is an AI-powered sales development tool that automates the front end of B2B lead generation. Instead of forcing you to build complex database filters, buy separate contact lists, or configure technical email domains from scratch, Explee combines market research, lead verification, personalised email writing, follow-ups, and meeting booking into a single workflow."),
+            ("h2", "How it works in four simple steps"),
+            ("ul", [
+                "<strong>1. Website and offer analysis:</strong> You enter your website URL or describe what your business sells in plain language. Explee scans your offering and competitors to identify the buyer segments most likely to need your services.",
+                "<strong>2. Decision-maker discovery:</strong> Using a database covering over 105 million companies and local business listings, the AI locates relevant decision-makers and verifies their email addresses before sending.",
+                "<strong>3. Tailored cold outreach and follow-ups:</strong> Rather than sending generic mass blasts, Explee researches each prospect's company details to write personalised emails and automatically manages follow-up sequences.",
+                "<strong>4. Reply handling and calendar booking:</strong> When a prospect responds with interest, the system surfaces the warm lead and shares your booking link so qualified meetings land directly on your calendar.",
+            ]),
+            ("h2", "Why it fits growing SMEs and lean teams"),
+            ("ul", [
+                "<strong>No heavy monthly subscriptions:</strong> Unlike traditional sales platforms that lock you into recurring monthly contracts, Explee runs on a pay-as-you-go model at roughly $0.04 per email sent, and you can pause campaigns anytime your pipeline is full.",
+                "<strong>Protects your primary business domain:</strong> Cold outreach carries deliverability risks if done from your main company inbox. Explee sends from its own pre-warmed sending domains, keeping your everyday client and supplier communication safe.",
+                "<strong>Built-in budget controls:</strong> Because the agent runs autonomously, you can set daily spending caps to test which industries or offers generate the best replies before scaling up.",
+            ]),
+            ("h2", "Who gets the most value from Explee?"),
+            ("ul", [
+                "<strong>B2B service providers and consultants:</strong> Agencies, IT firms, HR consultancies, and professional practices looking for steady commercial retainers.",
+                "<strong>Local and regional SMEs:</strong> Logistics companies, wholesalers, contractors, and suppliers targeting business buyers via company and Google Maps data.",
+                "<strong>Founders and solo operators:</strong> Entrepreneurs who need a consistent sales pipeline without hiring full-time business development staff.",
+            ]),
+            ("h2", "A practical tip before you launch"),
+            ("p", "Automation works best when paired with a clear, low-friction offer. Instead of pitching a high-ticket contract in the very first email, use Explee to offer a short discovery call, free audit, or tailored assessment. Start with a small daily budget cap, review the initial sample emails to make sure the tone matches your brand, and refine your targeting based on which niches reply fastest."),
+            ("h2", "Ready to test AI-powered outreach?"),
+            ("p", f'Explee offers $30 in free trial credits (covering roughly 750 outreach emails) with no monthly subscription commitment, making it easy to test whether automated B2B outreach works for your business. Pricing and verification terms (including card verification) apply per Explee. Read more on our <a href="../recommended.html#explee">recommended tools page</a> or <a href="{EXPLEE_URL}" target="_blank" rel="sponsored noopener">start your free trial with Explee AI &rarr;</a>'),
+        ],
+        "help": ("Keep your new client pipeline tidy", "As outbound leads turn into invoices and retainers, Lumeo keeps your monthly bookkeeping, debtors tracking and cash flow reports up to date."),
     },
 ]

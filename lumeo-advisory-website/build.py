@@ -22,6 +22,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 IKHOKHA_URL = "https://connect.ikhokha.com/ik-referral?code=uYzKEYNl"
 NAKED_URL = "https://app.naked.insure/e/j6UDD5yZV6b"
 WEBAFRICA_URL = "https://www.webafrica.co.za/affiliate?aff=WA-W3701104"
+EXPLEE_URL = "https://explee.com/?utm_source=Pumeza+Mqeni&utm_medium=affiliate&utm_campaign=Explee&ref=pumeza63"
 
 DISCLOSURE = ("Some links on this page are partner links. Lumeo Advisory may receive a reward "
               "if you sign up through them. Always compare options before you decide.")
@@ -205,6 +206,7 @@ ICONS = {
     "protect-yourself-not-only-the-business": f'<g {W}><path d="M600 180l140 50v110c0 80-60 120-140 150-80-30-140-70-140-150V230z"/></g><g {G}><path d="M540 340l45 45 80-95"/></g>',
     "funding-without-a-bank-loan": f'<g {W}><path d="M450 270h260M450 270l50-45M450 270l50 45"/><path d="M750 390H490M750 390l-50-45M750 390l-50 45"/></g><g {G}><circle cx="600" cy="460" r="0"/></g>',
     "five-things-to-do-before-december": f'<g {W}><path d="M450 330h300"/><circle cx="470" cy="330" r="18"/><circle cx="535" cy="330" r="18"/><circle cx="600" cy="330" r="18"/><circle cx="665" cy="330" r="18"/><circle cx="730" cy="330" r="18"/></g><g {G}><path d="M590 330l8 8 14-16"/></g>',
+    "how-south-african-smes-can-automate-b2b-client-acquisition": f'<g {W}><rect x="440" y="230" width="300" height="200" rx="22"/><path d="M445 245l145 105 145-105"/></g><g {G}><path d="M680 185h85v85"/><path d="M675 275l90-90"/></g>',
 }
 DEFAULT_ICON = f'<g {W}><circle cx="600" cy="300" r="90"/></g>'
 
@@ -388,6 +390,29 @@ def build_recommended():
             <li><strong>Address-based availability.</strong> Fibre coverage and wireless performance depend on your location, so check your address and the package details before choosing.</li>
           </ul>
           <p>Compare current speeds, pricing, setup requirements and contract terms before signing up. The link goes to Webafrica and may be used to sign up for its services.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="partner band" id="explee">
+      <div class="wrap partner-grid">
+        <div>
+          <h2>Explee</h2>
+          <p class="kicker">Autonomous AI outbound agent for B2B prospecting and cold email, pay as you go.</p>
+          <a class="btn" href="{EXPLEE_URL}" target="_blank" rel="sponsored noopener">Start your free trial</a>
+        </div>
+        <div class="partner-body">
+          <p>Explee is an AI-powered sales development tool that automates the front end of B2B client acquisition. Give it your website URL or describe what you sell, and it handles market research, lead verification, personalised emails, follow-ups and calendar booking in one workflow.</p>
+          <h3>How it works and what you get</h3>
+          <ul>
+            <li><strong>Offer and buyer analysis.</strong> Scans your website and competitors to pinpoint the buyer segments most likely to need your service.</li>
+            <li><strong>Decision-maker discovery.</strong> Searches over 105 million companies and local business listings, verifying email addresses before sending.</li>
+            <li><strong>Tailored outreach and follow-ups.</strong> Researches each prospect to write personalised emails, sends from pre-warmed domains to protect your main inbox, and follows up automatically.</li>
+            <li><strong>Reply handling and booking.</strong> Surfaces warm replies and shares your booking link so qualified calls land directly on your calendar.</li>
+          </ul>
+          <h3>Pricing and budget controls</h3>
+          <p>Explee runs on pay-as-you-go pricing at roughly $0.04 per email sent with no monthly subscription lock-in, and lets you set daily spending caps or pause anytime. New accounts receive $30 in free trial credits (covering roughly 750 outreach emails; card required to verify per Explee pricing).</p>
+          <p>Read our full walkthrough in <a href="blog/how-south-african-smes-can-automate-b2b-client-acquisition.html">How South African SMEs can automate B2B client acquisition</a>, or <a href="index.html#contact">talk to Lumeo</a> about tracking campaign ROI and client retainers in your monthly books.</p>
         </div>
       </div>
     </section>

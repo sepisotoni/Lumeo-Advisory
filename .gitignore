@@ -1,0 +1,9 @@
+# AI Studio preview & local environment artifacts
+node_modules/
+package.json
+package-lock.json
+bun.lock
+server.js
+public/
+.DS_Store
+__pycache__/

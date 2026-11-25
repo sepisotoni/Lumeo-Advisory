@@ -129,12 +129,25 @@ a { color: inherit; }
 .plan { border: 1px solid rgba(35, 78, 112, .22); border-radius: 14px; padding: 1.8rem 1.6rem; background: #fff; }
 .plan h3 { font-size: 1.5rem; color: var(--pine); }
 .plan-for { margin-top: .4rem; color: var(--muted); font-size: .98rem; }
-.plan ul { margin: 1.3rem 0 0; padding: 0; list-style: none; display: grid; gap: .7rem; }
+.plan-price { margin-top: 1rem; font: 700 1.35rem var(--display); color: var(--pine); }
+.plan-price span { display: block; font: 500 .96rem var(--body); color: var(--muted); }
+.plan-build { margin-top: .3rem; color: var(--muted); font-size: .94rem; }
+.plan h4 { margin-top: 1.35rem; font-size: 1rem; color: var(--pine); }
+.plan ul { margin: .65rem 0 0; padding: 0; list-style: none; display: grid; gap: .7rem; }
 .plan li { padding-left: 1.5rem; position: relative; }
 .plan li::before { content: ""; position: absolute; left: 0; top: .5em; width: .6rem; height: .6rem; border-radius: 50%; background: var(--lumen); }
 .plan-main { background: var(--pine); color: #fff; border-color: var(--pine); padding-block: 2.3rem; }
 .plan-main h3 { color: #fff; }
 .plan-main .plan-for { color: var(--sage); }
+.plan-main .plan-price,
+.plan-main h4 { color: #fff; }
+.plan-main .plan-price span,
+.plan-main .plan-build { color: var(--sage); }
+.plan-extras { margin-top: 2rem; padding: 1.6rem; border: 1px solid rgba(35, 78, 112, .22); border-radius: 14px; background: #fff; }
+.plan-extras h3 { font-size: 1.3rem; color: var(--pine); }
+.plan-extras ul { margin: 1rem 0 0; padding-left: 1.2rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem 2rem; }
+.plan-terms { margin-top: 1.2rem; max-width: 55rem; color: var(--muted); font-size: .92rem; }
+.plan-terms + .btn { margin-top: 1.2rem; }
 
 /* FAQ */
 .faq { display: grid; grid-template-columns: .8fr 1.4fr; gap: clamp(2rem, 6vw, 5rem); align-items: start; }
@@ -179,6 +192,7 @@ a { color: inherit; }
   .btn-small { margin-left: auto; }
   .ledger-rows li { grid-template-columns: 1fr auto; }
   .ledger-rows .chip { display: none; }
+  .plan-extras ul { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -306,6 +320,14 @@ a { color: inherit; }
         <label class="search"><span class="sr">Search articles</span><input id="post-search" type="search" placeholder="Search articles, e.g. VAT or funding" autocomplete="off"></label>
         <p id="no-results" class="fineprint" hidden>No articles match your search.</p>
         <div class="posts" id="post-list">
+          <a class="post" href="../blog/how-south-african-smes-can-automate-b2b-client-acquisition.html">
+            <img class="thumb" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgcm9sZT0iaW1nIiBhcmlhLWhpZGRlbj0idHJ1ZSI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzIzNEU3MCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNGOEY5OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIGZpbGw9InVybCgjZykiLz4KPGNpcmNsZSBjeD0iMTA1MCIgY3k9IjkwIiByPSIxOTAiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA3Ii8+PGNpcmNsZSBjeD0iMTMwIiBjeT0iNTYwIiByPSIxNTAiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA2Ii8+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYwMCAzMTUpIHNjYWxlKDEuNykgdHJhbnNsYXRlKC02MDAgLTMyMCkiPjxnIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIj48cmVjdCB4PSI0NDAiIHk9IjIzMCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIHJ4PSIyMiIvPjxwYXRoIGQ9Ik00NDUgMjQ1bDE0NSAxMDUgMTQ1LTEwNSIvPjwvZz48ZyBzdHJva2U9IiNGNEMyNEIiIHN0cm9rZS13aWR0aD0iMTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTY4MCAxODVoODV2ODUiLz48cGF0aCBkPSJNNjc1IDI3NWw5MC05MCIvPjwvZz48L2c+Cjwvc3ZnPgo=" alt="" width="168" height="88">
+            <span class="post-body">
+              <time datetime="2026-11-25">25 November 2026</time>
+              <span class="post-title">How South African SMEs can automate B2B client acquisition without hiring a sales team</span>
+              <span class="post-sum">How an autonomous AI outbound agent handles prospecting, personalised outreach, follow-ups and booking on pay-as-you-go terms.</span>
+            </span>
+          </a>
           <a class="post" href="../blog/five-things-to-do-before-december.html">
             <img class="thumb" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgcm9sZT0iaW1nIiBhcmlhLWhpZGRlbj0idHJ1ZSI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzIzNEU3MCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNGOEY5OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIGZpbGw9InVybCgjZykiLz4KPGNpcmNsZSBjeD0iMTA1MCIgY3k9IjkwIiByPSIxOTAiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA3Ii8+PGNpcmNsZSBjeD0iMTMwIiBjeT0iNTYwIiByPSIxNTAiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA2Ii8+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYwMCAzMTUpIHNjYWxlKDEuNykgdHJhbnNsYXRlKC02MDAgLTMyMCkiPjxnIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIj48cGF0aCBkPSJNNDUwIDMzMGgzMDAiLz48Y2lyY2xlIGN4PSI0NzAiIGN5PSIzMzAiIHI9IjE4Ii8+PGNpcmNsZSBjeD0iNTM1IiBjeT0iMzMwIiByPSIxOCIvPjxjaXJjbGUgY3g9IjYwMCIgY3k9IjMzMCIgcj0iMTgiLz48Y2lyY2xlIGN4PSI2NjUiIGN5PSIzMzAiIHI9IjE4Ii8+PGNpcmNsZSBjeD0iNzMwIiBjeT0iMzMwIiByPSIxOCIvPjwvZz48ZyBzdHJva2U9IiNGNEMyNEIiIHN0cm9rZS13aWR0aD0iMTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTU5MCAzMzBsOCA4IDE0LTE2Ii8+PC9nPjwvZz4KPC9zdmc+Cg==" alt="" width="168" height="88">
             <span class="post-body">
